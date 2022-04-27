@@ -102,3 +102,16 @@ body {
   font-size: 20px;
   text-transform: uppercase;
 }
+
+.time_wrap {
+  text-align: justify;
+  width: 180px;
+  padding-right: 10px;
+  font-size: 14px;
+}
+
+.today_time {
+  text-align: center;
+  font-size: 14px;
+  padding-right: 70px;
+}

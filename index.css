@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
+* {
+  box-sizing: border-box;
+  font-family: "Exo", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)
+    no-repeat center center fixed;
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.supreme {
+  max-width: 1000px;
+  margin: 100px auto auto auto;
+}
+
+.todo_title {
+  text-align: center;
+  color: blanchedalmond;
+  font-size: 100px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.search_wrap {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  margin-bottom: 40px;
+}
+
+.search_input {
+  width: 85%;
+  background-color: lightgray;
+  border: 3px solid white;
+  border-radius: 15px 5px 5px 15px;
+  font-size: 30px;
+  padding-left: 10px;
+}
+
+.search_button {
+  width: 140px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: lightblue;
+  border: 3px solid white;
+  border-radius: 5px 15px 15px 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.save_wrap {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgray;
+  align-items: center;
+  height: 35px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding-right: 5px;
+  height: 50px;
+  transition: 0.4s;
+}
+
+.save_wrap:hover {
+  box-shadow: 0px 0px 12px 5px rgba(34, 60, 80, 0.2) inset;
+}
+
+.checkbox {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.save_text {
+  text-align: center;
+  font-size: 25px;
+}
+
+.delete_button {
+  cursor: pointer;
+  height: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+}

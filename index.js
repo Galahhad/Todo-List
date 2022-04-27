@@ -2,6 +2,12 @@ const searchWrap = document.querySelector(".search_wrap");
 searchWrap.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  const todayTime = document.createElement("div");
+  todayTime.className = "today_time";
+
+  const time = document.createElement("div");
+  time.className = "time_wrap";
+
   const saveWrap = document.createElement("form");
   saveWrap.className = "save_wrap";
 
@@ -22,6 +28,8 @@ searchWrap.addEventListener("submit", (e) => {
 
   supreme.append(saveWrap);
   saveWrap.append(checkbox, saveText, deleteButton);
+  saveText.after(time);
+  time.after(todayTime);
 
   searchInput.value = "";
 
@@ -34,9 +42,14 @@ searchWrap.addEventListener("submit", (e) => {
     if (checkbox.checked) {
       saveText.style.color = "darkgray";
       saveText.style.textDecoration = "line-through";
+      time.textContent = new Date().toISOString().split("T")[0];
+      todayTime.textContent = new Date().toLocaleTimeString().slice(0, -3);
     } else {
       saveText.style.textDecoration = "none";
       saveText.style.color = "black";
+      time.textContent = "";
+      todayTime.textContent = "";
     }
   });
 });
+

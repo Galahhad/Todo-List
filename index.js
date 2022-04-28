@@ -40,15 +40,18 @@ searchWrap.addEventListener("submit", (e) => {
 
   checkbox.addEventListener("change", () => {
     if (checkbox.checked) {
+      const searchWrap = document.querySelector(".search_wrap");
       saveText.style.color = "darkgray";
       saveText.style.textDecoration = "line-through";
       time.textContent = new Date().toISOString().split("T")[0];
       todayTime.textContent = new Date().toLocaleTimeString().slice(0, -3);
+      searchWrap.before(saveWrap)
     } else {
       saveText.style.textDecoration = "none";
       saveText.style.color = "black";
       time.textContent = "";
       todayTime.textContent = "";
+      searchWrap.after(saveWrap);
     }
   });
 });

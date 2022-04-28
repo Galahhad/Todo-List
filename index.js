@@ -23,10 +23,10 @@ searchWrap.addEventListener("submit", (e) => {
   const deleteButton = document.createElement("button");
   deleteButton.className = "delete_button";
   deleteButton.textContent = "delete";
+  
+  const prependBlock = document.querySelector(".prepend_block")
 
-  const supreme = document.querySelector(".supreme");
-
-  supreme.append(saveWrap);
+  prependBlock.after(saveWrap);
   saveWrap.append(checkbox, saveText, deleteButton);
   saveText.after(time);
   time.after(todayTime);
@@ -55,4 +55,3 @@ searchWrap.addEventListener("submit", (e) => {
     }
   });
 });
-
